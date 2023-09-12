@@ -10,7 +10,7 @@ We hypothesize that this is caused by the regularization losses that are imposed
 <br>
 
 <p align="center" float="left">
-    <img src="./figs/method2-1.png"/ width=59%> 
+    <img src="./figs/method2-1.png"/ width=89%> 
     
 </p>
 
