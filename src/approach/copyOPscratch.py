@@ -488,12 +488,6 @@ class Appr(Learning_Appr):
                 print(path)
                 modelDict = torch.load(path, map_location='cuda:0')
                 self.modelFB = utilsProj.load_backbone(self.modelFB, modelDict['simsiam'])
-                # if not (self.loadm2):
-                #     self.modelFB.backbone = deepcopy(temp)
-                # elif t>0:
-                #     self.modelFB.backbone = deepcopy(temp)
-
-
 
             # empty embeddings
             self.embeddingAvai = np.zeros((10, 1))
