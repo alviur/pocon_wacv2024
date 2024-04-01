@@ -1,0 +1,12 @@
+# FT
+PYTHONPATH='.' python main_incremental.py --gpu 5 --exp_name simsiam --datasets cifar100_noTrans --network ss_resnet18 --num_tasks 10 --seed 1234 --batch_size 512 --nepochs 800 --optim_name sgd --lr 0.1 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --classifier_nepochs 200 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7 --stop_at_task 5 --eval_omni_head --eval_fresh_head --kd_method ft --approach simsiam --results_path /home/btwardowski/cvc-class-il/result_simsiam
+# L2
+PYTHONPATH='.' python main_incremental.py --gpu 2 --exp_name simsiam --datasets cifar100_noTrans --network ss_resnet18 --num_tasks 10 --seed 1234 --batch_size 512 --nepochs 800 --optim_name sgd --lr 0.1 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --classifier_nepochs 200 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7 --stop_at_task 5 --eval_omni_head --eval_fresh_head --kd_method L2 --approach simsiam --results_path /home/btwardowski/cvc-class-il/result_simsiam
+# L2rel
+PYTHONPATH='.' python main_incremental.py --gpu 3 --exp_name simsiam --datasets cifar100_noTrans --network ss_resnet18 --num_tasks 10 --seed 1234 --batch_size 512 --nepochs 800 --optim_name sgd --lr 0.1 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --classifier_nepochs 200 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7 --stop_at_task 5 --eval_omni_head --eval_fresh_head --kd_method L2rel --approach simsiam --results_path /home/btwardowski/cvc-class-il/result_simsiam
+
+# P2
+PYTHONPATH='.' python main_incremental.py --gpu 4 --exp_name simsiam --datasets cifar100_noTrans --network ss_resnet18 --num_tasks 10 --seed 1234 --batch_size 512 --nepochs 800 --optim_name sgd --lr 0.1 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --classifier_nepochs 200 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7 --stop_at_task 5 --eval_omni_head --eval_fresh_head --kd_method p2 --approach simsiam --results_path /home/btwardowski/cvc-class-il/result_simsiam
+
+# L2rel
+PYTHONPATH='.' python main_incremental.py --gpu 1 --exp_name simsiam --datasets cifar100_noTrans --network ss_resnet18 --num_tasks 10 --seed 1234 --batch_size 512 --nepochs 800 --optim_name sgd --lr 0.1 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --classifier_nepochs 200 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7 --stop_at_task 5 --eval_omni_head --eval_fresh_head --kd_method L2relCos --approach simsiam --results_path /home/btwardowski/cvc-class-il/result_simsiam

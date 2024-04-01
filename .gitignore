@@ -1,0 +1,15 @@
+/data/
+/.history/
+/result*/
+**/*-checkpoint.ipynb
+.vscode/
+**/*.pyc
+**/*.pt
+**/*.pkl
+**/lightning_logs
+**/datasets/
+.idea/workspace.xml
+*.yaml
+wandb/run-20221103_101907-zzclt06b/files/wandb-summary.json
+*.json
+*.json

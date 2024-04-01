@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ "$1" != "" ]; then
+    echo "Running approach: $1"
+else
+    echo "No approach has been assigned."
+fi
+if [ "$2" != "" ]; then
+    echo "Running on gpu: $2"
+else
+    echo "No gpu has been assigned."
+fi
+
+PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && cd .. && pwd )"
+SRC_DIR="$PROJECT_DIR/src"
+echo "Project dir: $PROJECT_DIR"
+echo "Sources dir: $SRC_DIR"
+SEED=2
+
+RESULTS_DIR="$PROJECT_DIR/results"
+if [ "$3" != "" ]; then
+    RESULTS_DIR=$3
+else
+    echo "No results dir is given. Default will be used."
+fi
+echo "Results dir: $RESULTS_DIR"
+
+
+if [ "$1" = "joint" ] || [ "$1" = "dmc" ]; then
+        echo "Copy the experiment folders from exp1b for this approach."
+elif [ "$1" = "icarl" ] || [ "$1" = "bic" ] || [ "$1" = "luci" ] || [ "$1" = "eeil" ]; then
+        echo "Those approaches do not support exemplars."
+else
+        PYTHONPATH=$SRC_DIR python3 -u $SRC_DIR/main_incremental.py --exp_name exp1d_$SEED \
+               --datasets cifar100_icarl --num_tasks 11 --nc_first_task 50 --network resnet32 \
+               --nepochs 200 --batch_size 128 --results_path $RESULTS_DIR \
+               --gridsearch_tasks 3 --gridsearch_config gridsearch_config \
+               --gridsearch_acc_drop_thr 0.2 --gridsearch_hparam_decay 0.5 \
+               --approach $1 --gpu $2 --seed $SEED
+fi
