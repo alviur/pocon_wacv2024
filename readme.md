@@ -32,7 +32,11 @@ pip install -U pip
 pip install tensorflow-gpu tensorboard
 
 ```
-
+### CIFAR100
+E.g. running Barlow Twins copyOP:
+```
+pytest src/tests/wacv.py
+```
 
 # Citation
 If you like our work, please cite our [paper](https://arxiv.org/):
