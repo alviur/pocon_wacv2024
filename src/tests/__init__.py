@@ -4,7 +4,8 @@ import torch
 import datasets.dataset_config as c
 
 from main_incremental import main
-
+# from main_incremental_no_task_boundary import main # uncomment for no task boundaries settings
+# from main_incremental_getExpert import main
 
 
 def run_main(args_line, result_dir):

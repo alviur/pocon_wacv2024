@@ -277,62 +277,6 @@ class BarlowTwins(nn.Module):
             return optim, None
 
 
-    # def configure_optimizers(self, lrExp):
-    #
-    #     # params = list(self.backbone.parameters())
-    #     # params += list(self.projector.parameters())
-    #     # params += list(self.expertBackbone.parameters())
-    #     # params += list(self.projectorExp.parameters())
-    #     # params += list(self.projectorRet.parameters())
-    #
-    #     params = [
-    #         {'params': self.backbone.parameters(), 'lr': self.base_lr},
-    #         {'params': self.projector.parameters(), 'lr': lrExp * self.base_lr},
-    #         {'params': self.expertBackbone.parameters(), 'lr':  lrExp *self.base_lr},
-    #         {'params': self.projectorExp.parameters(), 'lr': self.base_lr},
-    #         {'params': self.projectorRet.parameters(), 'lr': self.base_lr},
-    #     ]
-    #
-    #     optim = torch.optim.SGD(params, lr=self.base_lr, momentum=0.9, weight_decay=5e-4)
-    #     max_steps =  self.maxEpochs
-    #     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optim, max_steps)
-    #     if self.change_lr_scheduler:
-    #         self.scheduler = scheduler
-    #     else:
-    #         self.scheduler = None
-    #
-    #
-    #     # if self.lars_wrapper:
-    #     #     optim = LARSWrapper(
-    #     #         optim,
-    #     #         eta=0.02,  # trust coefficient
-    #     #         clip=True
-    #     #     )
-    #
-    #     return optim, None
-    #     # return optim, None
-    #
-    #     # if self.t < 10:
-    #     #     params = list(self.backbone.parameters())
-    #     #     params += list(self.projector.parameters())
-    #     #     params += list(self.expertBackbone.parameters())
-    #     #     params += list(self.projectorExp.parameters())
-    #     #     params += list(self.projectorRet.parameters())
-    #     #
-    #     #     optim = torch.optim.SGD(params, lr=self.base_lr, momentum=0.9, weight_decay=5e-4)
-    #     #     max_steps = (int(2.3 * self.maxEpochs)) if self.change_lr_scheduler else self.maxEpochs
-    #     #     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optim, max_steps)
-    #     #     self.scheduler = scheduler
-    #     #
-    #     #     # if self.lars_wrapper:
-    #     #     #     optim = LARSWrapper(
-    #     #     #         optim,
-    #     #     #         eta=0.02,  # trust coefficient
-    #     #     #         clip=True
-    #     #     #     )
-    #     #
-    #     #     # return optim, scheduler
-    #     #     return optim, None
 
 
 class vicReg(nn.Module):

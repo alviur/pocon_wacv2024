@@ -14,7 +14,14 @@ We hypothesize that this is caused by the regularization losses that are imposed
     
 </p>
 
-**This code will be refactored, I am moving all the code inside the [CaSSLe](https://github.com/DonkeyShot21/cassle) framework. Currently, you can train and evaluate using the CopyOP (The method used in the paper tables). Note that TinyImagenet is also available but the runtime is slow, the refactored version will be faster.**
+**This code will be refactored, I am moving all the code inside the [CaSSLe](https://github.com/DonkeyShot21/cassle) framework. Currently, you can train and evaluate using the CopyOP (The method used in the paper tables). Note that TinyImagenet and ImageNet100 are also available but the runtime is extremely slow, the refactored version will be faster.**
+
+
+# TL;DR
+If you are trying to replicate this method inside your code or just want to find the core training parts look for:
+- [src/approach/copyOPscratch.py](https://github.com/alviur/pocon_wacv2024/blob/main/src/approach/copyOPscratch.py): trains a ResNet18 from scratch using the copyOP approach
+- [src/approch/sslModels.py](https://github.com/alviur/pocon_wacv2024/blob/main/src/approach/sslModels.py) : contains core classes (SSL and CL) and functions of the POCON method
+- [src/main_incremental.py](https://github.com/alviur/pocon_wacv2024/blob/main/src/main_incremental.py) : Data split and task control
 
 # Setup conda
 
@@ -34,7 +41,7 @@ pip install -U pip
 pip install tensorflow-gpu tensorboard
 
 ```
-## Training
+## Class-incremental Training
 ### CIFAR100
 E.g. running Barlow Twins copyOP:
 ```
@@ -46,6 +53,10 @@ For linear evaluation:
 ```
 pytest src/tests/linear_prob.py
 ```
+
+## No task boundary setting
+
+Please replace main_incremental.py for [main_incremental_no_task_boundary.py](https://github.com/alviur/pocon_wacv2024/blob/main/src/main_incremental_no_task_boundary.py)
 
 # Logging
 Logging is performed with [WandB](https://wandb.ai/site). 
