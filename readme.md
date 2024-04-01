@@ -56,7 +56,7 @@ pytest src/tests/linear_prob.py
 
 ## No task boundary setting
 
-Please replace main_incremental.py for [main_incremental_no_task_boundary.py](https://github.com/alviur/pocon_wacv2024/blob/main/src/main_incremental_no_task_boundary.py)
+Please [replace](https://github.com/alviur/pocon_wacv2024/blob/b628634aff5a31b1dcf719406c9e8491d8db80af/src/tests/__init__.py#L7) main_incremental.py for [main_incremental_no_task_boundary.py](https://github.com/alviur/pocon_wacv2024/blob/main/src/main_incremental_no_task_boundary.py)
 
 # Logging
 Logging is performed with [WandB](https://wandb.ai/site). 
