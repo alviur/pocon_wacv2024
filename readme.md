@@ -14,6 +14,8 @@ We hypothesize that this is caused by the regularization losses that are imposed
     
 </p>
 
+**This code will be refactored, I am moving all the code inside the [CaSSLe](https://github.com/DonkeyShot21/cassle) framework. Currently, you can train and evaluate using the CopyOP (The method used in the paper tables). Note that TinyImagenet is also available but the runtime is slow, the refactored version will be faster.**
+
 # Setup conda
 
 ```
@@ -42,7 +44,7 @@ pytest src/tests/wacv.py
 ## Linear Evaluation
 For linear evaluation:
 ```
-pytest src/tests/wacv.py
+pytest src/tests/linear_prob.py
 ```
 
 # Logging

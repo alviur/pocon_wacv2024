@@ -70,10 +70,12 @@ dataset2: str
     Dataset 2: cifar100
 task1_nepochs: int
     Number of epochs for task 1
+pathModelT1: str
+    Path to the folder with saved models
     
 """
 
-FAST_LOCAL_TEST_ARGS = "--gpu 0  --port 99 --exp_name eval --eval_omni_head  --head_classifier_lr 5e-2 --classifier_nepochs 200 --num_tasks 20 --loadExpert --lambdaExp 1 --nepochs 0 --ret_nepochs 0 --sslModel BT --datasets cifar100_noTrans --network resnet18  --seed 667 --batch_size 512  --optim_name sgd --lr 0.01 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7   --kd_method L2  --approach evalOmnihead  --projectorArc 2048_2048_2048 --dataset2 cifar100  --trans_nepochs 0 --wandblog   --expertArch ResNet18  --task1_nepochs 0  --pathModelT1 /data/users/agomezvi/GD_PFR/cifar100_noTrans_copyOPscratch_POCON_CIFAR100-04012024_165848_870841/ --loadTask1 --linearProj 0 --lrExpF 1"
+FAST_LOCAL_TEST_ARGS = "--gpu 0  --port 99 --exp_name eval --eval_omni_head  --head_classifier_lr 5e-2 --classifier_nepochs 200 --num_tasks 10 --loadExpert --lambdaExp 1 --nepochs 0 --ret_nepochs 0 --sslModel BT --datasets cifar100_noTrans --network resnet18  --seed 667 --batch_size 512  --optim_name sgd --lr 0.01 --momentum 0.9 --weight_decay 0.0001 --num_workers 4 --hidden_mlp 512 --jitter_strength 0.5 --lr_patience 20 --lr_min 5e-7   --kd_method L2  --approach evalOmnihead  --projectorArc 2048_2048_2048 --dataset2 cifar100  --trans_nepochs 0 --wandblog   --expertArch ResNet18  --task1_nepochs 0  --pathModelT1 /data/users/agomezvi/GD_PFR/cifar100_noTrans_copyOPscratch_POCON_CIFAR100-04012024_165848_870841/ --loadTask1 --linearProj 0 --lrExpF 1"
 
 
 
