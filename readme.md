@@ -32,12 +32,21 @@ pip install -U pip
 pip install tensorflow-gpu tensorboard
 
 ```
+## Training
 ### CIFAR100
 E.g. running Barlow Twins copyOP:
 ```
 pytest src/tests/wacv.py
 ```
 
+## Linear Evaluation
+For linear evaluation:
+```
+pytest src/tests/wacv.py
+```
+
+# Logging
+Logging is performed with [WandB](https://wandb.ai/site). 
 # Citation
 If you like our work, please cite our [paper](https://arxiv.org/):
 ```
