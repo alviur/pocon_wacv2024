@@ -10,7 +10,6 @@ import approach
 from loggers.exp_logger import MultiLogger
 from datasets.data_loader import get_loaders
 from datasets.dataset_config import dataset_config
-from last_layer_analysis import last_layer_analysis
 from networks import tvmodels, allmodels, set_tvmodel_head_var
 import random
 import wandb
