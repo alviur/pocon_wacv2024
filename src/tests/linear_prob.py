@@ -77,6 +77,7 @@ FAST_LOCAL_TEST_ARGS = "--gpu 0  --port 99 --exp_name eval --eval_omni_head  --h
 
 
 
+
 def test_simsiam():
     args_line = FAST_LOCAL_TEST_ARGS
     run_main_and_assert(args_line, 0, 0, result_dir='/data/users/agomezvi/GD_PFR')  
