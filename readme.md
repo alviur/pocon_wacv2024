@@ -1,7 +1,7 @@
  # Plasticity-Optimized Complementary Networks for Unsupervised Continual Learning
 
 This is the official repository for the paper:
-> **[Plasticity-Optimized Complementary Networks for Unsupervised Continual Learning](https://arxiv.org/abs/)**<br>
+> **[Plasticity-Optimized Complementary Networks for Unsupervised Continual Learning](https://arxiv.org/abs/2309.06086)**<br>
 > [Alex Gomez-Villa](https://scholar.google.com/citations?user=A2dhwNgAAAAJ&hl=en), [Bartlomiej Twardowski](https://scholar.google.com/citations?user=8yywECgAAAAJ&hl), [Kai Wang](https://scholar.google.com/citations?user=j14vd0wAAAAJ&hl), [Joost van de Weijer](https://scholar.google.com/citations?user=Gsw2iUEAAAAJ&hl)<br>
 > **WACV 2024**
 
